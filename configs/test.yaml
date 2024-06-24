@@ -1,0 +1,47 @@
+torch_home: ''
+types: "both"
+protocol: 2
+dataset:
+  name: 'ffpp'
+  task_order: ['ffpp','celeb_df', 'wild_deepfake','dfdc']
+  ffpp:
+    data_root: ''
+    data_types:
+    compressions: 'c23'
+    num_frames: 50
+    methods:
+    has_mask: False
+    moco: False
+    random_patch: None
+    balance: True
+
+  dfdc:
+    data_root: ""
+    methods: "mix"
+
+  celeb_df:
+    data_root: ''
+    num_frames: 
+    methods: 'both'
+
+  wild_deepfake:
+    root: ''
+    methods: "mix"
+    num_frames: 
+
+
+test:
+  batch_size: 32
+  threshold: 0.5
+  record_results: True
+
+
+val:
+  batch_size: 128
+
+
+
+train:
+  batch_size: 32
+  threshold: 0.5
+  record_results: True

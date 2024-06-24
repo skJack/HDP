@@ -1,0 +1,85 @@
+seed: 1234
+torch_home: ''
+froze: False
+
+dataset:
+  name: 'ffpp'
+  task_order: ['Deepfakes','Face2Face', 'FaceSwap','NeuralTextures']
+
+  ffpp:
+    data_root: ''
+    data_types:
+    compressions: 'c23'
+    num_frames: 
+    methods:
+    balance: True
+
+
+
+
+
+seal:
+  iters: 5
+  rate: 0.8
+  print_interval: 100
+
+transform:
+  image_size: 224
+  mean: [0.5, 0.5, 0.5]
+  std: [0.5, 0.5, 0.5]
+
+
+gpu: 0,1
+model:
+  name: 'BinaryClassifier'
+  ckpt_path: ""
+  params:
+    encoder: 'tf_efficientnet_b4_ns'
+    num_classes: 1
+    drop_rate: 0.2
+    has_feature: True
+    feature_dim: 128
+
+    
+
+loss:
+  name: 'BCELoss'
+  lambda: 1.0
+  amloss: False
+  m: 0.35
+  s: 30
+  b: 0.05
+
+
+
+optimizer:
+  name: 'Adam'
+  params:
+    lr: 2.0e-4
+    weight_decay: 1.0e-5
+
+
+scheduler:
+  name: 'StepLR'
+  params:
+    step_size: 10
+    gamma: 0.1
+
+
+train:
+  epochs: 20
+  batch_size: 64
+  print_interval: 100
+  val_interval: 1
+
+
+val:
+  batch_size: 64
+
+
+test:
+  batch_size: 128
+  record_results: True
+  threshold: 0.5
+
+

@@ -1,0 +1,8 @@
+albumentations==0.5.1
+easydict==1.9
+timm==0.3.1
+omegaconf==2.1.0
+nni==1.9
+tensorboardX==2.1
+efficientnet_pytorch
+wandb
