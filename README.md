@@ -80,10 +80,12 @@ to evaluate the final stage model with specific id on all testsets.
 
 If you are interested in this work, please cite our [paper](https://arxiv.org/abs/2308.06217)
 ```
-@article{sun2023continual,
+@article{sun2024continual,
   title={Continual Face Forgery Detection via Historical Distribution Preserving},
   author={Sun, Ke and Chen, Shen and Yao, Taiping and Sun, Xiaoshuai and Ding, Shouhong and Ji, Rongrong},
-  journal={arXiv preprint arXiv:2308.06217},
-  year={2023}
+  journal={International Journal of Computer Vision},
+  pages={1--18},
+  year={2024},
+  publisher={Springer}
 }
 ```
